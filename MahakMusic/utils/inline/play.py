@@ -96,9 +96,9 @@ def stream_markup(_, chat_id):
         [
             InlineKeyboardButton(
 
-                text="ᴜᴘᴅᴀᴛᴇ",
+                text="ᴏᴡɴᴇʀ",
 
-                url=f"t.me/{OWNER_USERNAME}",
+                url=f"https://t.me/itzAsuraa",
 
             ),
             InlineKeyboardButton(
