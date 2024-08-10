@@ -14,7 +14,7 @@ API_HASH = getenv("API_HASH", None)
 OWNER_USERNAME = getenv("OWNER_USERNAME", "itz_Asuraa")
 
 #❖  Get Your bot username
-BOT_USERNAME = getenv("BOT_USERNAME", "MahakxBot")
+BOT_USERNAME = getenv("BOT_USERNAME", "TanuMusicxBot")
 
 #❖  Don't Add style font 
 BOT_NAME = getenv("BOT_NAME", "MAHAK MUSIC")
@@ -44,7 +44,7 @@ HEROKU_API_KEY = getenv("HEROKU_API_KEY", None)
 
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
-    "https://github.com/GOD-R4V4N/MahakMusic",
+    "https://github.com/",
 )
 
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "master")
@@ -54,7 +54,7 @@ GIT_TOKEN = getenv(
 )  #❖ Fill this variable if your upstream repository is private
 
 SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/God_Ravana")
-SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/Ravan_Lankaa")
+SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/AsuraaSupport")
 
 #❖ Set this to True if you want the assistant to automatically leave chats after an interval
 AUTO_LEAVING_ASSISTANT = bool(getenv("AUTO_LEAVING_ASSISTANT", False))
