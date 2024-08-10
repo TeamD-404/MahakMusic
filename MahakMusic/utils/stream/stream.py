@@ -74,7 +74,7 @@ async def stream(
                     db[chat_id] = []
                 status = True if video else None
                 try:
-                    file_path, direct = await YouTube.download(
+                    file_path, direct = await YTB.download(
                         vidid, mystic, video=status, videoid=True
                     )
                 except:
@@ -138,7 +138,7 @@ async def stream(
         thumbnail = result["thumb"]
         status = True if video else None
         try:
-            file_path, direct = await YouTube.download(
+            file_path, direct = await YTB.download(
                 vidid, mystic, videoid=True, video=status
             )
         except:
