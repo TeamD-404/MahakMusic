@@ -15,7 +15,6 @@ from MahakMusic.utils.pastebin import AnonyBin
 from MahakMusic.utils.stream.queue import put_queue, put_queue_index
 from MahakMusic.utils.thumbnails import get_thumb
 
-
 async def stream(
     _,
     mystic,
@@ -31,8 +30,10 @@ async def stream(
 ):
     if not result:
         return
+
     if forceplay:
         await Anony.force_stop_stream(chat_id)
+
     if streamtype == "playlist":
         msg = f"{_['play_19']}\n\n"
         count = 0
@@ -130,6 +131,7 @@ async def stream(
                 caption=_["play_21"].format(position, link),
                 reply_markup=upl,
             )
+
     elif streamtype == "youtube":
         link = result["link"]
         vidid = result["vidid"]
@@ -141,11 +143,6 @@ async def stream(
             file_path, direct = await YTB.download(
                 vidid, mystic, videoid=True, video=status
             )
-        except:
-        try:
-                file_path, direct = await YTB.download(
-                    vidid, mystic, videoid=True, video=status
-                )
         except:
             raise AssistantErr(_["play_14"])
         if await is_active_chat(chat_id):
@@ -204,6 +201,7 @@ async def stream(
             )
             db[chat_id][0]["mystic"] = run
             db[chat_id][0]["markup"] = "stream"
+
     elif streamtype == "soundcloud":
         file_path = result["filepath"]
         title = result["title"]
@@ -254,6 +252,7 @@ async def stream(
             )
             db[chat_id][0]["mystic"] = run
             db[chat_id][0]["markup"] = "tg"
+
     elif streamtype == "telegram":
         file_path = result["path"]
         link = result["link"]
@@ -306,6 +305,7 @@ async def stream(
             )
             db[chat_id][0]["mystic"] = run
             db[chat_id][0]["markup"] = "tg"
+
     elif streamtype == "live":
         link = result["link"]
         vidid = result["vidid"]
@@ -372,6 +372,7 @@ async def stream(
             )
             db[chat_id][0]["mystic"] = run
             db[chat_id][0]["markup"] = "tg"
+
     elif streamtype == "index":
         link = result
         title = "ɪɴᴅᴇx ᴏʀ ᴍ3ᴜ8 ʟɪɴᴋ"
