@@ -5,7 +5,7 @@ from typing import Union
 from pyrogram.types import InlineKeyboardMarkup
 
 import config
-from MahakMusic import Carbon, YouTube, app
+from MahakMusic import Carbon, YouTube, app, YTB
 from MahakMusic.core.call import Anony
 from MahakMusic.misc import db
 from MahakMusic.utils.database import add_active_video_chat, is_active_chat
